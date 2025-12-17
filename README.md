@@ -149,6 +149,12 @@ The gait configuration for your robot can be found in <my_robot_config>/gait/gai
 
 - **Odometry Scaler** - You can use this parameter as a multiplier to the calculated velocities for dead reckoning. This can be useful to compensate odometry errors on open-loop systems. Normally this value ranges from 1.0 to 1.20.
 
+#4 Cambiar el mundo
+```bash
+export GAZEBO_MODEL_PATH=/home/israel/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/worlds/bookstore/models/
+gazebo /home/israel/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/worlds/bookstore/bookstore.world
+```
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
