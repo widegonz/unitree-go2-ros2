@@ -63,13 +63,13 @@ rosdep update
 mkdir -p go2_ws/src
 cd go2_ws/src
 git clone https://github.com/widegonz/unitree-go2-ros2.git
-cd go2_ws
+cd ~/go2_ws
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
 ### 1.2 Build your workspace:
 ```bash
-cd go2_ws
+cd ~/go2_ws
 colcon build
 . go2_ws/install/setup.bash
 ```
