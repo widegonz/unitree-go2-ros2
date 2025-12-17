@@ -60,17 +60,18 @@ sudo apt-get install ros-humble-velodyne-description
 sudo apt install -y python3-rosdep
 rosdep update
 
-cd <your_ws>/src
+mkdir -p go2_ws/src
+cd go2_ws/src
 git clone https://github.com/anujjain-dev/unitree-go2-ros2.git
-cd <your_ws>
+cd go2_ws
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
 ### 1.2 Build your workspace:
 ```bash
-cd <your_ws>
+cd go2_ws
 colcon build
-. <your_ws>/install/setup.bash
+. go2_ws/install/setup.bash
 ```
 ## 2. Quick Start
 
