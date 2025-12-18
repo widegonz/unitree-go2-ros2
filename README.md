@@ -149,11 +149,39 @@ The gait configuration for your robot can be found in <my_robot_config>/gait/gai
 
 - **Odometry Scaler** - You can use this parameter as a multiplier to the calculated velocities for dead reckoning. This can be useful to compensate odometry errors on open-loop systems. Normally this value ranges from 1.0 to 1.20.
 
-## 4 Cambiar el mundo
+## 4 Changing the World
+There are a total of 7 worlds that we can select for simulation with our robot:
+- bookstore.world
+- factory.world
+- office.world
+- small_house.world
+- default.world
+- outdoor.world
+- playground.world
+
+To use these worlds, we must do the following:
+
+1. Export the Gazebo-Path
 ```bash
-export GAZEBO_MODEL_PATH=/home/israel/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/worlds/bookstore/models/
-gazebo /home/israel/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/worlds/bookstore/bookstore.world
+echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/israel/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/models/' >> ~/.bashrc
 ```
+
+Change the `<your_user>` part to your username.
+
+2. Include the `world` variable in either of the 2 previous launch files:
+```bash
+ros2 launch go2_config gazebo.launch.py world:=<world_name>
+```
+If we want to use the bookstore world, we change `<world_name>` to `bookstore`:
+```bash
+ros2 launch go2_config gazebo.launch.py world:=bookstore
+```
+
+If we want to use the LiDAR and RViz:
+```bash
+ros2 launch go2_config gazebo_velodyne.launch.py rviz:=true world:=bookstore
+```
+With this, we can now use any of the worlds defined within the simulator.
 
 ## Contributing
 
