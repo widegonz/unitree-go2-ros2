@@ -31,10 +31,14 @@ def generate_launch_description():
     ros_control_config = os.path.join(
         config_pkg_share, "/config/ros_control/ros_control.yaml"
     )
+
+    bookstore = os.path.join(config_pkg_share, "worlds/bookstore/bookstore.world")
+    factory = os.path.join(config_pkg_share, "worlds/factory/factory.world")
+
     gait_config = os.path.join(config_pkg_share, "config/gait/gait.yaml")
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
     default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
-    default_world_path = os.path.join(config_pkg_share, "worlds/default.world")
+    default_world_path = factory
 
     declare_use_sim_time = DeclareLaunchArgument(
         "use_sim_time",
