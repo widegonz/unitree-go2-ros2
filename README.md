@@ -151,13 +151,17 @@ The gait configuration for your robot can be found in <my_robot_config>/gait/gai
 
 ## 4 Changing the World
 There are a total of 7 worlds that we can select for simulation with our robot:
-- bookstore.world
-- factory.world
-- office.world
-- small_house.world
-- default.world
-- outdoor.world
-- playground.world
+- bookstore
+![bookstore](https://github.com/user-attachments/assets/b4215f66-ada5-45d4-9579-5e00cd1b5327)
+- factory
+![factory](https://github.com/user-attachments/assets/c504fa95-99aa-4d08-9307-a83a2819d432)
+- office
+![office](https://github.com/user-attachments/assets/26195ff4-16c9-4f4f-ad45-7397f3be00df)
+- small_house
+![small_house](https://github.com/user-attachments/assets/bbaef9cc-d461-42ba-87a8-7986d0754598)
+- default
+- outdoor
+- playground
 
 To use these worlds, we must do the following:
 
