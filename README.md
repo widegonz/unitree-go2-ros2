@@ -187,16 +187,6 @@ ros2 launch go2_config gazebo_velodyne.launch.py rviz:=true world:=bookstore
 ```
 With this, we can now use any of the worlds defined within the simulator.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'feat: Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## Acknowledgements
 
 This project builds upon and incorporates work from the following projects:
