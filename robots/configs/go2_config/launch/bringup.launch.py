@@ -73,7 +73,7 @@ def generate_launch_description():
                 "joint_controller_topic": "joint_group_effort_controller/joint_trajectory",
                 "joints_map_path": joints_config,
                 "links_map_path": links_config,
-                "gait_config_path": gait_config
+                "gait_config_path": gait_config,
             }.items(),
         )
     ])

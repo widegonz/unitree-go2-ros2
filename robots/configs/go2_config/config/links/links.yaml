@@ -1,5 +1,9 @@
 /**:
   ros__parameters:
+    # --- AGREGADO NUEVO ---
+    #orientation_from_imu: true
+    # imu_topic: "/imu/data"
+    # ----------------------
     links_map:
       base: base_link
       left_front:
