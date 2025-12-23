@@ -187,6 +187,38 @@ ros2 launch go2_config gazebo_velodyne.launch.py rviz:=true world:=bookstore
 ```
 With this, we can now use any of the worlds defined within the simulator.
 
+## 5. Running the SLAM_Toolbox Package for Map Generation
+
+1. Launch the simulator with the desired world and LiDAR enabled:
+```bash
+ros2 launch go2_config gazebo_velodyne.launch.py world:=bookstore
+```
+
+2. Execute the launch file that utilizes the `slam_toolbox` package:
+```bash
+ros2 launch go2_config slam.launch.py use_sim_time:=true
+```
+
+The RViz panel will open as shown below:
+<img width="1850" height="1053" alt="Screenshot from 2025-12-22 22-11-50" src="https://github.com/user-attachments/assets/b01bac03-87a5-4777-ba94-e691a3091d9c" />
+
+
+3. Run the teleoperation node:
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+4. Navigate the robot:
+  - It is crucial to mention that during the mapping process, the robot must not collide with any obstacles. This is primarily because a collision disrupts the odometry, causing the LiDAR data to mismatch with the measurements, which results in a corrupted map.
+
+5. Save the map using the following command:
+```bash
+ros2 run nav2_map_server map_saver_cli -f ~/map
+```
+
+  - This command will generate the `.pgm` and `.yaml` files for the map in the root directory. Once this map is generated, trajectory planning can be performed.
+
+
 ## Acknowledgements
 
 This project builds upon and incorporates work from the following projects:
