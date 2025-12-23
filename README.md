@@ -150,6 +150,8 @@ The gait configuration for your robot can be found in <my_robot_config>/gait/gai
 - **Odometry Scaler** - You can use this parameter as a multiplier to the calculated velocities for dead reckoning. This can be useful to compensate odometry errors on open-loop systems. Normally this value ranges from 1.0 to 1.20.
 
 ## 4. Changing the World
+It is important to note that the first time the simulation is launched, Gazebo will take a considerable amount of time to load the world. This is normal behavior and occurs because the software must download the 3D models from the internet to save them in the computer's cache, as well as compile the graphic resources and process the physical structures of the environment for the first time. In subsequent runs, startup will be much faster as all these files will be ready and stored locally.
+
 There are a total of 7 worlds that we can select for simulation with our robot:
 - bookstore
 ![bookstore](https://github.com/user-attachments/assets/b4215f66-ada5-45d4-9579-5e00cd1b5327)
