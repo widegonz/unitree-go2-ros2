@@ -169,7 +169,7 @@ To use these worlds, we must do the following:
 
 1. Export the Gazebo-Path
 ```bash
-echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/israel/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/models/' >> ~/.bashrc
+echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/<your_user>/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/models/' >> ~/.bashrc
 ```
 
 Change the `<your_user>` part to your username.
