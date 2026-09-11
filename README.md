@@ -60,18 +60,18 @@ sudo apt-get install ros-humble-velodyne-description
 sudo apt install -y python3-rosdep
 rosdep update
 
-mkdir -p go2_ws/src
-cd go2_ws/src
+mkdir -p /src
+cd go2_sim/src
 git clone https://github.com/widegonz/unitree-go2-ros2.git
-cd ~/go2_ws
+cd ~/go2_sim
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
 ### 1.2 Build your workspace:
 ```bash
-cd ~/go2_ws
+cd ~/go2_sim
 colcon build
-. go2_ws/install/setup.bash
+. go2_sim/install/setup.bash
 ```
 ## 2. Quick Start
 
@@ -169,7 +169,7 @@ To use these worlds, we must do the following:
 
 1. Export the Gazebo-Path
 ```bash
-echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/<your_user>/go2_ws/src/unitree-go2-ros2/robots/configs/go2_config/models/' >> ~/.bashrc
+echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/<your_user>/go2_sim/src/unitree-go2-ros2/robots/configs/go2_config/models/' >> ~/.bashrc
 ```
 
 Change the `<your_user>` part to your username.
