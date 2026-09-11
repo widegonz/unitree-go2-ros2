@@ -60,7 +60,7 @@ sudo apt-get install ros-humble-velodyne-description
 sudo apt install -y python3-rosdep
 rosdep update
 
-mkdir -p /src
+mkdir -p go2_sim/src
 cd go2_sim/src
 git clone https://github.com/widegonz/unitree-go2-ros2.git
 cd ~/go2_sim
